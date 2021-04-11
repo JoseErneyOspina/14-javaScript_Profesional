@@ -1,0 +1,20 @@
+{
+  "name": "javascript_profesional",
+  "version": "1.0.0",
+  "description": "Proyecto del Curso Profesional de JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "live-server"
+  },
+  "keywords": [
+    "javascript",
+    "node",
+    "typescript"
+  ],
+  "author": "Jose Erney Ospina <joseerneyosp@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
