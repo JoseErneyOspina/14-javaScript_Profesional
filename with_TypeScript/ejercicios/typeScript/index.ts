@@ -49,3 +49,50 @@ comodin = { type: 'Wildcard' };
 
 // Object
 let someObject: object = { type: 'Wildcard' };
+
+
+// Funciones
+function addSuma(a: number, b:number): number {
+    return a + b;
+};
+const suma = addSuma(4,6);
+// Tipar funciones que devuelve funciones
+function createAdder (a: number): (number) => number {
+    return function (b: number) {
+        return b + a;
+    }
+}
+const addFour = createAdder(4);
+const fourPlus6 = addFour(6);
+// Argumentos y parametros opcionales
+/* function fullName(firstName: string, lasName?: string): string { */
+function fullName(firstName: string, lasName: string = 'Smith'): string {
+    return `${firstName} ${lasName}`;
+}
+const richard = fullName('Agente');
+
+// Interfaces
+enum Color {
+    Dorado = 'Rojo',
+    Plateado = 'Verde'
+}
+interface Rectangulo {
+    ancho: number
+    alto: number
+    color?: Color
+}
+let rect: Rectangulo = {
+    ancho: 4,
+    alto: 6,
+    color: Color.Dorado
+};
+function area(r: Rectangulo) {
+    return r.alto * r.ancho;
+}
+const areaRect = area(rect);
+console.log(areaRect);
+// poner opcional en la interface datos
+rect.toString = function () {
+    return this.color ? `un rectangulo ${this.color}` : `Un rectangulo`;
+};
+console.log(rect.toString());
